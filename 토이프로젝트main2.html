@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainPage</title>
+    <style>
+        @font-face {
+            font-family: 'BMDOHYEON';
+            src: url('') format('truetype');
+        }
+        div{
+            box-sizing: border-box;
+            /* border: 1px solid gray; */
+        }
+        .wrap{
+            height: auto;
+            margin: auto;
+            width: 100%;
+        }
+        #header{
+            width: 100%;
+            height: 10%;
+        }
+        #header_1{
+            width: 15%;
+            height: 15%;
+            float: left;
+            margin-top: 130px;
+            margin-left: 50px;
+        }
+        
+        #header_2{
+            box-sizing: border-box;
+            /* border: 1px solid red; */
+            width: 55%;
+            height: 90%;
+            float: left;
+            margin-top: 50px;
+        }
+        #header_3{
+            box-sizing: border-box;
+            /* border: 1px solid red; */
+            width: 25%;
+            height: 60%;
+            float: left;
+            margin-top: 130px;
+        }
+        #login_form{
+            width: auto;
+            height: 150px;
+        }
+        #login_form>*{
+            width: 100%;
+        }
+        #login_form_input{
+            height: 70%;
+        }
+        #login_form_input>*{
+            height: 100%;
+            float: left;
+        }
+        #login_input_id_pwd>input{
+            width: 100%;
+            height: 30%;
+            box-sizing: border-box;
+        }
+        #login_input_btn>input{
+            width: 100%;
+            height: 60%;
+        }
+        #login_input_ect{
+            height: 10%;
+            text-align: center;
+        }
+        #login_form_etc>a{
+            text-decoration: none;
+            color: black;
+            margin: 20px;
+            font-size: 15px;
+            vertical-align: middle;
+        }
+        #navi{
+            margin: 0;
+            list-style-type: none;
+            padding: 0;
+            height: 100%;
+        }
+        #navi>li{
+            box-sizing: border-box;
+            /* border: 1px solid red; */
+            float: left;
+            width: 15%;
+            height: 100%;
+            text-align: center;
+            padding: auto;
+            margin-top: 80px;
+            margin-left: 50px;
+            
+        }
+        #navi a{
+            text-decoration: none;
+            color: black;
+            font-size: 17px;
+            font-weight: 900;
+
+            width: 100%;
+            height: 100%;
+            display: block;
+            line-height: 35px;
+
+        }
+        #navi a:hover{
+            color: gray;
+            font-size: 19px;
+
+        }
+
+        #navi>li>ul{
+            list-style-type: none;
+            padding: 0;
+            display: none;
+
+        }
+        #navi>li>a:hover+ul{
+            display:block;
+        }
+        #navi>li>ul:hover{
+            display: block;
+        }
+        #content{
+            width: 100%;
+            height: 80%;
+        }
+        #content_1{
+            /* box-sizing: border-box;
+            border: 1px solid red; */
+            width: 100%;
+            height: 100%;
+        }
+        #radio{
+            margin-left: 50%
+        }
+        #content_2{
+            margin-top: 200px;
+        }
+        #content_2_1{
+            display: inline-block;
+            margin-left: 30px;
+        }
+        #content_2_2{
+            display: inline-block;
+            margin-left: 40px;
+        }
+        #content_2_3{
+            display: inline-block;
+            margin-left: 40px;
+        }
+        #col{
+            text-align: center;
+            margin-bottom: 100px;
+            font-weight: 1000;
+        }
+        #hr{
+            margin-top: 100px;
+        }
+        #btnb{
+            margin-top: 100px;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="header">
+            <div id="header_1"><img src="resources/image/casetify-logo.png" width="150px" height="50px"></div>
+            <div id="header_2">
+                <div id="navigator">
+                    <ul id="navi">
+                        <li><a href="">기종</a>
+                            <ul>
+                                <li><a href="">아이폰</a></li>
+                                <li><a href="">갤럭시</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">COLLECTION</a>
+                            <ul>
+                                <li><a href="">thisisneverthat</a></li>
+                                <li><a href="">aesap</a></li>
+                                <li><a href="">바비</a></li>
+                                <li><a href="">StarWars</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">악세서리</a>
+                                <ul>
+                                    <li><a href="">애플워치</a></li>
+                                    <li><a href="">아이패드</a></li>
+                                    <li><a href="">갤럭시워치</a></li>
+                                    <li><a href="">갤럭시패드</a></li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="" id="op">Other Product</a>
+                                <ul>
+                                    <li><a href="">맥세이프</a></li>
+                                    <li><a href="">스트랩</a></li>
+                                    <li><a href="">액정보호필름</a></li>
+                                    <li><a href="">무선충전기</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="header_3">
+                <div id="login_form">
+                    <form action="" id="login_form_input">
+                        <div id="login_input_id_pwd">
+                            <input type="text" name="userId" placeholder="ID" required><br>
+                            <input type="text" name="userPwd" placeholder="PWD" required>
+                        </div>
+
+                        <div id="login_input_btn">
+                            <input type="submit" value="로그인">
+                        </div>
+                    </form>
+                    <div id="login_form_etc">
+                        <a href="">회원가입</a>
+                        <a href="">ID/PWD 찾기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="content_1" >
+                <img src="resources/image/캡처.PNG" width="1495px">
+                <input type="radio" id="radio" name="gender" value="X" checked>
+                <label for="radioX"></label>
+                <input type="radio" id="radio1" name="gender" value="M">
+                <label for="radioM"></label>
+                <input type="radio" id="radio2" name="gender" value="F">
+                <label for="radioF"></label>
+                <!-- <input id="btnb" type="image" src="resources/image/buy.PNG" width="200px" height="150px"></input> -->
+            </div>
+            
+            <hr id="hr">
+            <div id="content_2">
+                <h1 id="col">COLLECTION</h1>
+                <div id="content_2_1"><img src="resources/image/캡처1.PNG"></div>
+                <div id="content_2_2"><img src="resources/image/캡처2.PNG"></div>
+                <div id="content_2_3"><img src="resources/image/캡처3.PNG"></div>
+            </div>
+            <div id="content_3"></div>
+        </div>
+
+        <div id="footer">
+            <div></div>
+        </div>
+
+    </div>
+</body>
+</html>
